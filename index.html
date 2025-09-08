@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un viaje por la sexualidad sin culpa y sin tabúes</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #e0e6ed;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1000px;
+            width: 90%;
+            margin: auto;
+            padding: 2rem;
+        }
+        .section {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            min-height: calc(100vh - 4rem);
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .section.active {
+            opacity: 1;
+            display: flex;
+        }
+        /* Fade-in animation for sections */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Grid-like positioning for nodes */
+        .loteria-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+            place-items: center;
+        }
+        .loteria-hub {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #4F46E5, #8B5CF6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-align: center;
+            box-shadow: 0 0 20px #8B5CF6;
+        }
+        .loteria-card {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #2D3748;
+            border-radius: 12px;
+            padding: 1rem;
+            border: 1px solid #4A5568;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .loteria-icon {
+            font-size: 2.5rem;
+        }
+        .loteria-text {
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .survey-textarea {
+            width: 100%;
+            height: 150px;
+            padding: 1rem;
+            background-color: #1a202c;
+            border-radius: 0.5rem;
+            border: 1px solid #4a5568;
+            color: #e0e6ed;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col justify-between items-center h-screen">
+    
+    <!-- Presentation Sections -->
+    <main class="container">
+        <!-- Section 1: Title and Definitions -->
+        <section id="section1" class="section active">
+            <h1 class="text-4xl sm:text-5xl font-bold text-center mb-12">Un viaje por la sexualidad sin culpa y sin tabúes</h1>
+            <div class="grid md:grid-cols-2 gap-8 text-lg">
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 fade-in">
+                    <h2 class="text-3xl font-bold text-indigo-400 mb-4">Tabú</h2>
+                    <p>Una norma social o cultural que prohíbe hablar o participar en ciertos comportamientos sexuales. A menudo, estas normas generan sentimientos de vergüenza o culpa en el individuo.</p>
+                </div>
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-700 fade-in">
+                    <h2 class="text-3xl font-bold text-purple-400 mb-4">Fetiche</h2>
+                    <p>Un interés o deseo sexual que se centra en un objeto, una parte del cuerpo no genital o una situación específica, que no está típicamente asociada con la excitación sexual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Taboos -->
+        <section id="section2" class="section">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12">Tabúes: El Lente Social y el Individuo</h2>
+            <div class="flex flex-col md:flex-row items-center md:items-start gap-12">
+                <div class="w-full md:w-1/2 flex justify-center fade-in">
+                    <img src="https://placehold.co/500x300/1E293B/E0E6ED?text=Mapa+del+Mundo" alt="Mapa del mundo con conexiones" class="rounded-xl shadow-lg border border-gray-700 w-full h-auto max-w-sm">
+                </div>
+                <div class="w-full md:w-1/2 fade-in">
+                    <h3 class="text-3xl font-bold mb-4">Principales Tabúes en el Mundo</h3>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Sexo antes del matrimonio</li>
+                        <li>Homosexualidad</li>
+                        <li>Masturbación</li>
+                        <li>BDSM/Kink</li>
+                        <li>Poligamia</li>
+                        <li>Relaciones Interraciales</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 grid md:grid-cols-3 gap-8 text-sm md:text-base">
+                <div class="p-4 rounded-lg border-2 border-dashed border-gray-600 bg-gray-800 fade-in">
+                    <h4 class="font-bold text-indigo-400 mb-2">Geografía Cultural</h4>
+                    <p>Un acto como el sexo antes del matrimonio es aceptado en algunas culturas, mientras que en otras es estrictamente tabú. Ejemplos incluyen la poligamia en algunas culturas del Medio Oriente y África Occidental, que es una práctica socialmente aceptada. O el sexo fuera del matrimonio, que en muchas sociedades occidentales se ha normalizado, mientras que en otras partes del mundo sigue siendo un tabú moral o religioso.</p>
+                </div>
+                <div class="p-4 rounded-lg border-2 border-dashed border-gray-600 bg-gray-800 fade-in">
+                    <h4 class="font-bold text-purple-400 mb-2">Contexto Histórico</h4>
+                    <p>Hablar de la masturbación o la homosexualidad han evolucionado en la actualidad. Por ejemplo, en el pasado, la masturbación era vista como una enfermedad o un pecado, mientras que hoy en día se reconoce como una parte normal y saludable del autoconocimiento sexual. De igual manera, la homosexualidad era considerada una enfermedad mental y un delito en muchos lugares. Ahora, aunque el camino continúa, se ha despenalizado y la comunidad LGBT+ ha logrado importantes avances en el reconocimiento de sus derechos y visibilidad.</p>
+                </div>
+                <div class="p-4 rounded-lg border-2 border-dashed border-gray-600 bg-gray-800 fade-in">
+                    <h4 class="font-bold text-green-400 mb-2">Mensaje Principal</h4>
+                    <p class="mb-2"><strong>Los tabúes son una especie de reglas impuestas por la sociedad, la religión o la familia.</strong></p>
+                    <p class="mb-2"><strong>La culpa no te pertenece.</strong> Es un sentimiento que resulta de no cumplir con estas normas externas.</p>
+                    <p>Los fetiches son gustos que nacen de ti. Al comprender esta diferencia, puedes liberarte de la culpa social y abrazar tu propia sexualidad.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Fetishes -->
+        <section id="section3" class="section">
+            <h2 class="text-4xl sm:text-5xl font-bold text-center mb-12">Fetiches: Individualidad y Comunidad</h2>
+            <div class="loteria-grid w-full h-auto max-w-4xl mx-auto mb-12 fade-in">
+                <div class="loteria-card">
+                    <span class="loteria-icon">🦶</span>
+                    <span class="loteria-text">Pies</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🔗</span>
+                    <span class="loteria-text">Bondage (BDSM)</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">👙</span>
+                    <span class="loteria-text">Lencería</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🐻</span>
+                    <span class="loteria-text">Osos</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🧥</span>
+                    <span class="loteria-text">Leather</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">👮</span>
+                    <span class="loteria-text">Uniformes</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🎭</span>
+                    <span class="loteria-text">Roleplay</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">👁️</span>
+                    <span class="loteria-text">Voyeurismo</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🚶</span>
+                    <span class="loteria-text">Cruising</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🧤</span>
+                    <span class="loteria-text">Látex</span>
+                </div>
+                <div class="loteria-hub col-span-2 row-span-2">Gustos Sexuales</div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🖐️</span>
+                    <span class="loteria-text">Spanking</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🔪</span>
+                    <span class="loteria-text">Sadomasoquismo</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">😈</span>
+                    <span class="loteria-text">Cuckolding</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">👚</span>
+                    <span class="loteria-text">Ropa Formal</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">📢</span>
+                    <span class="loteria-text">Dominación</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">👃</span>
+                    <span class="loteria-text">Olores</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🏃</span>
+                    <span class="loteria-text">Exhibicionismo</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🤗</span>
+                    <span class="loteria-text">Frotteurismo</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🎀</span>
+                    <span class="loteria-text">Shibari</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🐾</span>
+                    <span class="loteria-text">Petplay</span>
+                </div>
+                 <div class="loteria-card">
+                    <span class="loteria-icon">👨</span>
+                    <span class="loteria-text">Vellos</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">💦</span>
+                    <span class="loteria-text">Urolagnia</span>
+                </div>
+                <div class="loteria-card">
+                    <span class="loteria-icon">🌬️</span>
+                    <span class="loteria-text">Asfixia Erótica</span>
+                </div>
+            </div>
+
+            <div class="text-center text-lg mt-12 fade-in">
+                <p class="font-bold mb-4">"Los fetiches son tan únicos como cada persona."</p>
+                <p class="mx-auto max-w-2xl">"Al encontrar a otros con gustos similares, los fetiches se convierten en una forma de conectar y crear comunidades, demostrando que no estás solo."</p>
+            </div>
+        </section>
+
+        <!-- Section 4: Final Message and Contact Info -->
+        <section id="section4" class="section text-center">
+            <h2 class="text-4xl sm:text-5xl font-bold mb-8 fade-in">Recuerda que todo es con responsabilidad y cuidado</h2>
+            <p class="text-2xl sm:text-3xl mb-8 leading-relaxed mx-auto max-w-3xl fade-in">
+                "La clave para una sexualidad plena es la responsabilidad, la comunicación y el consentimiento. Cuida tu bienestar y el de los demás. Disfruta de tu sexualidad de forma segura."
+            </p>
+
+            <h2 class="text-4xl sm:text-5xl font-bold mt-16 mb-8 fade-in">Recursos y Apoyo</h2>
+            <div class="flex flex-col md:flex-row gap-8 items-start justify-center w-full">
+                <!-- Contact Info Column -->
+                <div class="w-full md:w-1/2 p-6 rounded-xl shadow-lg border border-gray-700 bg-gray-800 fade-in">
+                    <h3 class="text-2xl font-bold text-indigo-400 mb-4">CAPASITS GUADALUPE ZACATECAS</h3>
+                    <p class="text-lg">Centro especializado para la Prevención y Atención de pacientes con VIH y otras Infecciones de transmisión sexual, de manera ambulatoria.</p>
+                    <ul class="text-left mt-4 space-y-2">
+                        <li><strong>Dirección:</strong> <a href="https://www.google.com/maps/search/?api=1&query=CAPASITS+GUADALUPE+ZACATECAS+Calle+SARH+s/n+zona+Industrial+C.P.+98600" target="_blank" class="text-blue-400 hover:underline">Calle SARH s/n zona Industrial C.P. 98600</a></li>
+                        <li><strong>Teléfono:</strong> <a href="tel:4929252300" class="text-blue-400 hover:underline">492-925-23-00</a></li>
+                        <li><strong>Horario:</strong> Lunes a viernes de 8:00 a 15:30 hr.</li>
+                        <li><strong>Instagram:</strong> <a href="https://www.instagram.com/neta_zex/" target="_blank" class="text-blue-400 hover:underline">@neta_zex</a></li>
+                    </ul>
+                </div>
+                <!-- Survey Form Column -->
+                <div class="w-full md:w-1/2 p-6 rounded-xl shadow-lg border border-gray-700 bg-gray-800 fade-in">
+                    <h3 class="text-2xl font-bold text-purple-400 mb-4">Encuesta</h3>
+                    <p class="text-md mb-4">
+                        Tus respuestas son anónimas y nos ayudarán a comprender mejor los intereses y percepciones sobre la sexualidad.
+                    </p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdGKJB49MnQg7BqWbcd_AVntdan7mJjcjDSNI2qukFfY6_j2Q/viewform?usp=dialog" target="_blank" class="inline-block bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform transition-transform hover:scale-105">
+                        Ir a la encuesta
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Navigation Button -->
+        <div class="fixed bottom-8">
+            <button id="next-btn" class="bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform hover:scale-105">Siguiente</button>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const nextBtn = document.getElementById('next-btn');
+            let currentSectionIndex = 0;
+
+            function showSection(index) {
+                sections.forEach((section, i) => {
+                    section.classList.remove('active');
+                    if (i === index) {
+                        section.classList.add('active');
+                        // Fade-in children with a delay
+                        section.querySelectorAll('.fade-in').forEach((el, j) => {
+                            el.style.animationDelay = `${j * 0.2}s`;
+                        });
+                    }
+                });
+                
+                // Show/Hide next button on the final section
+                if (index === sections.length - 1) { // Final section
+                    nextBtn.style.display = 'none';
+                } else {
+                    nextBtn.style.display = 'inline-block';
+                }
+            }
+
+            nextBtn.addEventListener('click', () => {
+                currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+                showSection(currentSectionIndex);
+            });
+
+            showSection(0); // Show the first section on load
+        });
+    </script>
+</body>
+</html>
